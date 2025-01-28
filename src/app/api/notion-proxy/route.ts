@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
 
 	const searchParams = request.nextUrl.searchParams;
 	const pageId = searchParams.get('pageId');
-	console.log(pageId);
+	console.log(pageId); // log the pageId
 
 	if (!pageId) {
 		return NextResponse.json({ error: 'Missing pageId parameter' }, { status: 400 });
